@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
+    <style> 
+        input[type=submit] {
+          background-color: #04AA6D;
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          text-decoration: none;
+          margin: 4px 2px;
+          cursor: pointer;
+          position: fixed;
+          top: 10%;
+          left: 50%;
+          /* bring your own prefixes */
+          transform: translate(-50%, -50%);
+        }
+        </style>
 <body>
 
 <h1>Nature finder</h1>
 
 <!-- Add the image to the gallery -->
+
+
+<input type="submit" value="Find me some nature">
 
 {% for x in data %}
         <div class="col-md-4">
@@ -12,14 +31,13 @@
             <a href="{{ x.image.url }}">
               <img src="{{ x.image.url }}" alt="Lights" style="width:100%">
               <div class="caption">
-                <p>{{ x.title }}</p>
               </div>
             </a>
           </div>
         </div>
-        {% endfor %}
+{% endfor %}
         
-<input type="submit" value="Submit">
+
 
 
 </body>
